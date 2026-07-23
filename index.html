@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KEEPERHAN | Tienda Oficial</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+<h1>KEEPERHAN</h1>
+
+</div>
+
+<div class="buscador">
+
+<input type="text" id="buscar" placeholder="Buscar guantes...">
+
+<button>
+
+<i class="fas fa-search"></i>
+
+</button>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="#">Inicio</a></li>
+
+<li><a href="#">Productos</a></li>
+
+<li><a href="nosotros.html">Sobre Nosotros</a></li>
+
+<li>
+
+<button id="carritoBtn">
+
+🛒 Carrito
+
+<span id="contador">0</span>
+
+</button>
+
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="banner">
+
+<div class="texto">
+
+<h2>Los mejores guantes para arqueros</h2>
+
+<p>Calidad profesional para cada partido.</p>
+
+<a href="#productos">
+
+<button>Comprar Ahora</button>
+
+</a>
+
+</div>
+
+</section>
+
+<section id="productos" class="productos">
+
+<h2>Guantes Destacados</h2>
+
+<div class="contenedor">
+
+<div class="card">
+
+<img src="https://www.gransport.es/38458-large_default/guantes-rg-toride-25.jpg">
+
+<h3>Guantes RG Toride 25</h3>
+
+<p class="precio">$79.990</p>
+
+<button class="descripcion"
+onclick="mostrarDescripcion('Guante profesional con látex alemán de máxima adherencia.')">
+
+Ver descripción
+
+</button>
+
+<button onclick="agregarCarrito('RG Toride 25',79990)">
+
+Añadir al carrito
+
+</button>
+
+<button class="comprar">
+
+Comprar
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://http2.mlstatic.com/D_NQ_NP_660241-MLC89973298648_082025-O-guantes-de-arquero-elite-sport-nova.webp">
+
+<h3>Elite Sport Nova</h3>
+
+<p class="precio">$67.990</p>
+
+<button class="descripcion"
+onclick="mostrarDescripcion('Modelo Elite con palma premium.')">
+
+Ver descripción
+
+</button>
+
+<button onclick="agregarCarrito('Elite Sport Nova',67990)">
+
+Añadir al carrito
+
+</button>
+
+<button class="comprar">
+
+Comprar
+
+</button>
+
+</div>
+
+<div class="card">
+
+<img src="https://http2.mlstatic.com/D_Q_NP_989638-MLA112115918744_062026-O.webp">
+
+<h3>Reusch Attrakt Freegel</h3>
+
+<p class="precio">$59.990</p>
+
+<button class="descripcion"
+onclick="mostrarDescripcion('Guantes Reusch usados para entrenamientos.')">
+
+Ver descripción
+
+</button>
+
+<button onclick="agregarCarrito('Reusch Attrakt Freegel',89990)">
+
+Añadir al carrito
+
+</button>
+
+<button class="comprar">
+
+Comprar
+
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<div id="popup" class="popup">
+
+<div class="contenidoPopup">
+
+<h2>Descripción</h2>
+
+<p id="textoDescripcion"></p>
+
+<button onclick="cerrarPopup()">Cerrar</button>
+
+</div>
+
+</div>
+
+<div id="carrito" class="carrito">
+
+<h2>Mi Carrito</h2>
+
+<div id="listaCarrito"></div>
+
+<h3>Total: $
+
+<span id="total">0</span>
+
+</h3>
+
+<button class="finalizar">
+
+Finalizar Compra
+
+</button>
+
+</div>
+
+<footer>
+
+<h2>KEEPERHAN © 2026</h2>
+
+<p>Lucas Peña</p>
+<!-- Botón flotante de WhatsApp -->
+<a href="https://wa.me/5491112345678?text=Hola,%20quiero%20más%20información."
+   class="whatsapp-float"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contactar por WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+    <path fill="#fff" d="M19.11 17.52c-.29-.14-1.7-.84-1.97-.93-.26-.1-.45-.14-.64.14-.19.29-.74.93-.91 1.12-.17.19-.33.21-.62.07-.29-.14-1.21-.45-2.3-1.43-.85-.76-1.43-1.7-1.6-1.99-.17-.29-.02-.44.13-.58.13-.13.29-.33.43-.5.14-.17.19-.29.29-.48.1-.19.05-.36-.02-.5-.07-.14-.64-1.55-.88-2.13-.23-.55-.47-.48-.64-.49h-.55c-.19 0-.5.07-.76.36-.26.29-1 1-.97 2.43.02 1.43 1.02 2.81 1.17 3 .14.19 2 3.05 4.86 4.27.68.29 1.21.47 1.62.6.68.21 1.29.18 1.78.11.54-.08 1.7-.69 1.94-1.35.24-.67.24-1.24.17-1.35-.07-.12-.26-.19-.55-.33z"/>
+    <path fill="#fff" d="M16.03 3C8.83 3 3 8.82 3 16c0 2.54.73 4.99 2.11 7.09L3 29l6.09-2.07A13 13 0 0 0 16.03 29C23.2 29 29 23.18 29 16S23.2 3 16.03 3zm0 23.6c-2.16 0-4.27-.58-6.12-1.69l-.44-.26-3.61 1.23 1.21-3.52-.29-.46A10.53 10.53 0 0 1 5.4 16c0-5.86 4.77-10.63 10.63-10.63S26.66 10.14 26.66 16s-4.77 10.6-10.63 10.6z"/>
+  </svg>
+</a>
+
+<style>
+.whatsapp-float{
+  position:fixed;
+  width:60px;
+  height:60px;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+  z-index:9999;
+  transition:.3s;
+}
+
+.whatsapp-float:hover{
+  transform:scale(1.1);
+  background:#1EBE5D;
+}
+
+.whatsapp-float svg{
+  width:34px;
+  height:34px;
+}
+</style>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
